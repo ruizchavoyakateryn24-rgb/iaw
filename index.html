@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Evidencias - Desarrollo Web</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-build: #3b82f6;
+            --accent-impl: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 1px solid #334155;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .module-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .module-card.build {
+            border-top: 4px solid var(--accent-build);
+        }
+
+        .module-card.implement {
+            border-top: 4px solid var(--accent-impl);
+        }
+
+        .module-card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #334155;
+        }
+
+        .practice-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .practice-list a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 1rem;
+            background-color: #0f172a;
+            color: var(--text-main);
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #1e293b;
+            transition: all 0.2s ease;
+        }
+
+        .practice-list a:hover {
+            transform: translateY(-2px);
+            border-color: #475569;
+        }
+
+        .build .practice-list a:hover {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--accent-build);
+        }
+
+        .implement .practice-list a:hover {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--accent-impl);
+        }
+
+        footer {
+            background-color: #090d16;
+            text-align: center;
+            padding: 1.5rem;
+            border-top: 1px solid #1e293b;
+            margin-top: auto;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer span {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Portafolio de Evidencias</h1>
+        <p>Módulos de Desarrollo e Implementación Web</p>
+    </header>
+
+    <main>
+        <!-- Bloque 1: Construye Aplicaciones Web -->
+        <section class="module-card build">
+            <h2>Construye Aplicaciones Web</h2>
+            <ul class="practice-list">
+                <li><a href="practica1.html"><span>Práctica 1</span> ➔</a></li>
+                <li><a href="imagen.html"><span>Imagen</span> ➔</a></li>
+                <li><a href="practica2.html"><span>Práctica 2</span> ➔</a></li>
+                <li><a href="ejemplo3.html"><span>Ejemplo 3</span> ➔</a></li>
+                <li><a href="blabla4.html"><span>Bla Bla 4</span> ➔</a></li>
+            </ul>
+        </section>
+
+        <!-- Bloque 2: Implementa Aplicaciones Web -->
+        <section class="module-card implement">
+            <h2>Implementa Aplicaciones Web</h2>
+            <ul class="practice-list">
+                <li><a href="#"><span>Práctica 1 - Despliegue</span> ➔</a></li>
+                <li><a href="#"><span>Configuración de Servidor</span> ➔</a></li>
+                <li><a href="#"><span>Base de Datos</span> ➔</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Estudiante: <span>[TU NOMBRE COMPLETO AQUÍ]</span> | Grupo: <span>[TU GRUPO AQUÍ]</span></p>
+    </footer>
+
+</body>
+</html>
